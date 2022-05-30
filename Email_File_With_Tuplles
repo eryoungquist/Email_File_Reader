@@ -1,0 +1,17 @@
+name = input("Enter file:")
+if len(name) < 1:
+    name = "file.txt"
+handle = open(name)
+dic = ()
+for line in handle:
+    if line.startswith("From " ) == True:
+        x=line.split()
+        x= x[5][0:2]
+        dic= list(dic)
+        dic.append(x)
+        dic = tuple(dic)
+dic = sorted(dic)
+dic = tuple(dic)
+final =list(set(dic))
+for x in final:
+    print(x, dic.count(x))
